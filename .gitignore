@@ -95,6 +95,5 @@ TestResults/
 *.docfx.json.user
 /tests/Application/PlayGround/PlayGround.csproj
 /tests/Application/PlayGround/Programm.cs
-
 /volumes/
 Migrations/
