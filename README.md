@@ -25,7 +25,7 @@ dotnet ef migrations add InitialCreate   --project Infrastructure/MigrationServi
 docker-compose up -d --build
 ```
 Приложение по следующему пути: [http://localhost:5049](Ссылка)
-
+Swagger доступен по следующему пути: [http://localhost:5049/swagger](Ссылка)
 ---
 ## Что хочется отметить:
 ### DataReader - отвечат за чтение данных и преобразование их в доменные модели.
