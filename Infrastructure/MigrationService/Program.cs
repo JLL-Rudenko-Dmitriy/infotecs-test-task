@@ -30,11 +30,11 @@ class Program
         return Task.CompletedTask;
     }
     
-    static IHostBuilder CreateHostBuilder(string[] args)
+    public static IHostBuilder CreateHostBuilder(string[] args)
     {
         DotEnv.Load("../../environment/.env");
         
-        Console.WriteLine("✅ CreateHostBuilder CALLED");
+        Console.WriteLine("CreateHostBuilder CALLED");
         return Host.CreateDefaultBuilder(args)
             .ConfigureServices((context, services) =>
             {

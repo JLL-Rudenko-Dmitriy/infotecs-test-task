@@ -21,9 +21,5 @@ RUN dotnet publish "./MigrationService.csproj" -c $BUILD_CONFIGURATION -o /app/p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-
-RUN dotnet tool install ef --globaly
-RUN dotnet ef migrations add InititalMigration -p "/app/src/Infrastructure/Persistence/Persistence.csproj" \
-     -s "/app/src/Infrastructure/Persistence/Persistence.csproj" \
     
 ENTRYPOINT ["dotnet", "MigrationService.dll"]
