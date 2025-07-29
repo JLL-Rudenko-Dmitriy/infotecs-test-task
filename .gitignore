@@ -1,0 +1,101 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Aa]rtifacts/
+
+## Rider
+.idea/
+.idea_modules/
+.run/
+*.sln.iml
+
+# Docs
+.docs
+
+# Environment
+.env
+
+# Volumes:
+postgres-data
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.vspscc
+*.vssscc
+
+## Visual Studio
+.vscode/
+.vs/
+*.cache
+*.log
+*.tlog
+*.pdb
+
+## ASP.NET Core secrets
+secrets.json
+*.db
+*.sqlite
+*.mdf
+
+## Configuration
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.Development.json
+
+## Log files
+*.log
+logs/
+
+## DocFX
+.docfx/api/
+.docfx/_site/
+.docfx/obj/
+.docfx/manifest.json
+
+## Build tools
+project.lock.json
+project.fragment.lock.json
+
+## Package directories
+node_modules/
+packages/
+*.nupkg
+*.snupkg
+
+## Static site or output
+_site/
+wwwroot/dist/
+wwwroot/build/
+
+## Misc
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+## ReSharper & JetBrains
+_ReSharper*/
+*.DotSettings.user
+*.DotCover
+
+## Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+
+## Other
+*.sql
+*.csv
+*.docfx.json.user
+/tests/Application/PlayGround/PlayGround.csproj
+/tests/Application/PlayGround/Programm.cs
+
+/test_data/
+/volumes/
+Migrations/

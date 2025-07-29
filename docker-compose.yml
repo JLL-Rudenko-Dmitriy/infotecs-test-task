@@ -1,0 +1,40 @@
+﻿
+services:
+  db-postgres:
+    container_name: "timescale-db-postgres"
+    image: postgres:17-alpine3.21
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    env_file:
+      environment/.env
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volumes/pg-data:/var/lib/postgresql/data
+  
+  migration-service:
+    container_name: "timescale-migrator-service"
+    build:
+      context: .
+      dockerfile: Infrastructure/MigrationService/Dockerfile 
+    env_file:
+      - path: environment/.env
+        required: true
+    depends_on:
+      - db-postgres   
+  
+  web-timescale-app:
+    container_name: "timescale-app"
+    build:
+      context: .
+      dockerfile: Web/TimescaleWeb/Dockerfile
+    environment:
+      ASPNETCORE_HTTP_PORTS: "5049"
+    ports:
+      - "5049:5049"
+    env_file:
+      - path: environment/.env
+        required: true
+    depends_on:
+      - migration-service

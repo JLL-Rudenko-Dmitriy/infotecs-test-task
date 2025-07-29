@@ -1,0 +1,13 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "MigrationService": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "CONNECTIONSTRING__POSTGRES": "Host=localhost;Port=5433;Database=postgres;Username=postgres;Password=postgres;"
+      }
+    }
+  }
+}
